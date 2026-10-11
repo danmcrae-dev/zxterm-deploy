@@ -177,7 +177,7 @@ Request:
 
 ## Deployment
 
-The server runs on maximus (192.168.12.132). Docker Compose is configured with:
+The server runs on zod/maximus (192.168.20.26). Docker Compose is configured with:
 
 - Port `7443:7443`
 - Volume `./data:/data` (persistent SQLite database)
