@@ -25,10 +25,10 @@ git clone git@github.com:danmcrae-dev/zxterm-deploy.git
 cd zxterm-deploy
 
 # Run with default settings
-./deploy-zxterm.sh /opt/netentive
+./deploy-zxterm.sh /opt/zxterm
 
 # Or specify a custom install directory
-./deploy-zxterm.sh /home/deploy/netentive
+./deploy-zxterm.sh /home/deploy/zxterm
 ```
 
 ## Network Configuration
@@ -53,10 +53,10 @@ Requires=docker.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-WorkingDirectory=/opt/netentive/zxterm/deployment
+WorkingDirectory=/opt/zxterm/zxterm/deployment
 ExecStart=/usr/bin/docker compose up -d
 ExecStop=/usr/bin/docker compose down
-ExecStopPost=/usr/bin/docker compose -f /opt/netentive/zxterm-mcp/docker-compose.yml down
+ExecStopPost=/usr/bin/docker compose -f /opt/zxterm/zxterm-mcp/docker-compose.yml down
 
 [Install]
 WantedBy=multi-user.target

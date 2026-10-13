@@ -30,7 +30,7 @@ The SSH keypair is generated once during setup. The **public key** is added as a
 ### 1. Generate the SSH deploy keypair
 
 ```bash
-cd /home/damcrae/netentive/zxterm-deploy/key-server
+cd /home/damcrae/zxterm/zxterm-deploy/key-server
 ssh-keygen -t ed25519 -f deploy_key -N "" -C "zxterm-deploy-key"
 ```
 

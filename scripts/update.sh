@@ -10,10 +10,10 @@ set -euo pipefail
 # Usage:
 #   ./update.sh [INSTALL_DIR]
 #
-# Default install dir: ~/netentive
+# Default install dir: ~/zxterm
 # ==================================================================
 
-INSTALL_DIR="${1:-$HOME/netentive}"
+INSTALL_DIR="${1:-$HOME/zxterm}"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

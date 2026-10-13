@@ -18,7 +18,7 @@ set -euo pipefail
 # Optional flags:
 #   --key NET-XXXX-XXXX-XXXX   Deployment key (required)
 #   --key-server URL           Key server URL (default: https://keys.zxterm.io)
-#   --install-dir PATH         Install directory (default: ~/netentive)
+#   --install-dir PATH         Install directory (default: ~/zxterm)
 #
 # Env vars:
 #   KEY_SERVER_URL             Override key server URL
@@ -41,7 +41,7 @@ fi
 # ------------------------------------------------------------------
 LICENSE_KEY=""
 KEY_SERVER_URL="${KEY_SERVER_URL:-https://keys.zxterm.io}"
-INSTALL_DIR="$HOME/netentive"
+INSTALL_DIR="$HOME/zxterm"
 
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -955,7 +955,7 @@ else
         # WSL2: Windows Task Scheduler via PowerShell
         if [[ -f "$DEPLOY_SCRIPTS_DIR/install-windows-autostart.ps1" ]]; then
             info "To install auto-start on Windows, run this in PowerShell:"
-            info "  wsl -e bash -c 'cat ~/netentive/zxterm-deploy/scripts/install-windows-autostart.ps1' | powershell.exe -"
+            info "  wsl -e bash -c 'cat ~/zxterm/zxterm-deploy/scripts/install-windows-autostart.ps1' | powershell.exe -"
             ok "PowerShell auto-start script available at ${DEPLOY_SCRIPTS_DIR}/install-windows-autostart.ps1"
         else
             warn "PowerShell auto-start template not found, skipping"

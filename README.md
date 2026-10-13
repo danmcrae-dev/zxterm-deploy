@@ -56,7 +56,7 @@ cd zxterm-deploy
 |------|-------------|---------|
 | `--key` | **Required.** Deployment license key | — |
 | `--key-server` | Key validation server URL | `https://keys.zxterm.io` |
-| `--install-dir` | Directory to clone repos into | `~/netentive` |
+| `--install-dir` | Directory to clone repos into | `~/zxterm` |
 
 ### Environment Variables
 
@@ -78,15 +78,15 @@ Management commands:
 docker ps
 
 # Stop all services
-cd ~/netentive/zxterm/deployment && docker compose down
-cd ~/netentive/zxterm-mcp && docker compose down
+cd ~/zxterm/zxterm/deployment && docker compose down
+cd ~/zxterm/zxterm-mcp && docker compose down
 
 # Start all services
-cd ~/netentive/zxterm/deployment && docker compose up -d
-cd ~/netentive/zxterm-mcp && docker compose up -d
+cd ~/zxterm/zxterm/deployment && docker compose up -d
+cd ~/zxterm/zxterm-mcp && docker compose up -d
 
 # Update to latest version
-cd ~/netentive/zxterm-deploy && bash scripts/update.sh
+cd ~/zxterm/zxterm-deploy && bash scripts/update.sh
 ```
 
 ## Key Server Setup (For Administrators)
