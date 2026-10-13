@@ -1,8 +1,8 @@
-# Netentive Architecture
+# Zxterm Architecture
 
 ## Overview
 
-Netentive is a network assessment platform consisting of three application repos
+Zxterm is a network assessment platform consisting of three application repos
 and a deployment repo.
 
 ```

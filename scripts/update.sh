@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ==================================================================
-# Netentive Update Script
+# Zxterm Update Script
 #
 # Pulls latest code for all repos and rebuilds Docker containers.
 # Called by the in-app System → Update button, or run manually.
@@ -26,7 +26,7 @@ ok()    { echo -e "${GREEN}[OK]${NC}    $*"; }
 err()   { echo -e "${RED}[ERROR]${NC} $*"; }
 
 echo ""
-echo "  Netentive Update"
+echo "  Zxterm Update"
 echo "  Install directory: ${INSTALL_DIR}"
 echo ""
 

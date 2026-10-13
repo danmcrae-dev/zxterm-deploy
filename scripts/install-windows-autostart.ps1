@@ -2,5 +2,5 @@
 $action = New-ScheduledTaskAction -Execute "wsl" -Argument "-e bash $env:USERPROFILE\netentive\zxterm-start.sh"
 $trigger = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
-Register-ScheduledTask -TaskName "NetentiveAutoStart" -Action $action -Trigger $trigger -Settings $settings -Force
-Write-Host "Auto-start installed — Netentive will start when you log into Windows"
+Register-ScheduledTask -TaskName "ZxtermAutoStart" -Action $action -Trigger $trigger -Settings $settings -Force
+Write-Host "Auto-start installed — Zxterm will start when you log into Windows"

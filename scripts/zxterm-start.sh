@@ -1,10 +1,10 @@
 #!/bin/bash
-# Netentive auto-start script — called by launchd/systemd/Task Scheduler on login
+# Zxterm auto-start script — called by launchd/systemd/Task Scheduler on login
 # Starts the Docker runtime (platform-specific) + all containers
 LOG=/tmp/zxterm-startup.log
-NETENTIVE_DIR="$(cd "$(dirname "$0")" && pwd)"
+ZXTERM_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "[$(date)] Netentive startup beginning..." >> "$LOG"
+echo "[$(date)] Zxterm startup beginning..." >> "$LOG"
 
 # Start Docker runtime based on platform
 OS_TYPE="$(uname -s)"
@@ -47,7 +47,7 @@ if ! docker info &>/dev/null; then
 fi
 
 # Start SaaS containers
-SAAS_DEPLOY="$NETENTIVE_DIR/zxterm/deployment"
+SAAS_DEPLOY="$ZXTERM_DIR/zxterm/deployment"
 if [[ -f "$SAAS_DEPLOY/../.env" ]]; then
     echo "[$(date)] Starting SaaS containers..." >> "$LOG"
     cd "$SAAS_DEPLOY"
@@ -58,7 +58,7 @@ else
 fi
 
 # Start MCP containers
-MCP_DEPLOY="$NETENTIVE_DIR/zxterm-mcp/deployment"
+MCP_DEPLOY="$ZXTERM_DIR/zxterm-mcp/deployment"
 if [[ -f "$MCP_DEPLOY/../.env" ]]; then
     echo "[$(date)] Starting MCP containers..." >> "$LOG"
     cd "$MCP_DEPLOY"
@@ -84,4 +84,4 @@ for i in $(seq 1 30); do
     sleep 3
 done
 
-echo "[$(date)] Netentive startup complete" >> "$LOG"
+echo "[$(date)] Zxterm startup complete" >> "$LOG"

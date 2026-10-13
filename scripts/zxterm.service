@@ -1,5 +1,5 @@
 [Unit]
-Description=Netentive Platform Auto-Start
+Description=Zxterm Platform Auto-Start
 After=docker.service
 Requires=docker.service
 

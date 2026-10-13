@@ -1,6 +1,6 @@
-# Netentive Key Server
+# Zxterm Key Server
 
-License key validation server for the Netentive deployment system. Customers receive a license key (e.g. `NET-A3F2-9B1C-4D8E`) when they purchase, then run the deploy script which calls this server to validate the key and retrieve a read-only SSH deploy key for cloning the private repos.
+License key validation server for the Zxterm deployment system. Customers receive a license key (e.g. `NET-A3F2-9B1C-4D8E`) when they purchase, then run the deploy script which calls this server to validate the key and retrieve a read-only SSH deploy key for cloning the private repos.
 
 ## Architecture
 

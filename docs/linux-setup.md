@@ -41,12 +41,12 @@ The SaaS and MCP containers use `network_mode: host`, binding directly to the ho
 
 ## systemd Service (optional)
 
-To auto-start Netentive on boot:
+To auto-start Zxterm on boot:
 
 ```bash
-cat > /etc/systemd/system/netentive.service << 'EOF'
+cat > /etc/systemd/system/zxterm.service << 'EOF'
 [Unit]
-Description=Netentive Platform
+Description=Zxterm Platform
 After=network.target docker.service
 Requires=docker.service
 
@@ -62,8 +62,8 @@ ExecStopPost=/usr/bin/docker compose -f /opt/netentive/zxterm-mcp/docker-compose
 WantedBy=multi-user.target
 EOF
 
-systemctl enable netentive
-systemctl start netentive
+systemctl enable zxterm
+systemctl start zxterm
 ```
 
 ## Backup
@@ -72,8 +72,8 @@ The PostgreSQL data volume contains all assessment data, device configs, and use
 
 ```bash
 # Backup
-docker exec deployment-postgres-1 pg_dump -U netentive netentive > backup.sql
+docker exec deployment-postgres-1 pg_dump -U zxterm zxterm > backup.sql
 
 # Restore
-docker exec -i deployment-postgres-1 psql -U netentive netentive < backup.sql
+docker exec -i deployment-postgres-1 psql -U zxterm zxterm < backup.sql
 ```

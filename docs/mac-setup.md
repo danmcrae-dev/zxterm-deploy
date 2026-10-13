@@ -18,7 +18,7 @@ The script installs everything:
 - Colima (Docker daemon for macOS)
 - Docker CLI + docker-compose
 - Git
-- All three Netentive repos
+- All three Zxterm repos
 - Full Docker stack with generated secrets
 
 ## Colima vs Docker Desktop
@@ -33,7 +33,7 @@ This deployment uses [Colima](https://github.com/abiosoft/colima) instead of Doc
 | GUI | Yes | No (CLI only) |
 | Apple Silicon | Yes | Yes |
 
-**Why Colima?** The Netentive Docker Compose files use `network_mode: host`. Docker Desktop for Mac doesn't support host networking — containers can't bind to `localhost` directly. Colima with `--network-address` enables host networking, so the compose files work unchanged.
+**Why Colima?** The Zxterm Docker Compose files use `network_mode: host`. Docker Desktop for Mac doesn't support host networking — containers can't bind to `localhost` directly. Colima with `--network-address` enables host networking, so the compose files work unchanged.
 
 ## VPN Configuration
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Netentive Key Validation Server.
+Zxterm Key Validation Server.
 
 FastAPI application that validates deployment license keys against a SQLite
 database and returns a base64-encoded SSH deploy key for cloning private repos.
@@ -227,9 +227,9 @@ def _build_success_response(row: sqlite3.Row) -> dict:
 # ---------------------------------------------------------------------------
 
 app = FastAPI(
-    title="Netentive Key Server",
+    title="Zxterm Key Server",
     version="1.0.0",
-    description="Deployment license key validation for the Netentive platform.",
+    description="Deployment license key validation for the Zxterm platform.",
 )
 
 # NOTE: No CORS middleware — this is a machine-to-machine API called from

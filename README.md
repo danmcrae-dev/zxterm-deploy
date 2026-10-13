@@ -1,6 +1,6 @@
 # zxterm-deploy
 
-One-command deployment for the Netentive network assessment platform.
+One-command deployment for the Zxterm network assessment platform.
 
 ## Quick Start
 
@@ -8,7 +8,7 @@ One-command deployment for the Netentive network assessment platform.
 curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-zxterm.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
 ```
 
-You need a deployment key. Contact support@netentive.io to purchase one.
+You need a deployment key. Contact support@zxterm.io to purchase one.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ The script auto-installs:
 ## What It Does
 
 1. Installs prerequisites (Homebrew, Colima, Docker, Git)
-2. Validates your deployment key against the Netentive key server
+2. Validates your deployment key against the Zxterm key server
 3. Clones the three private repos (zxterm, zxterm-mcp, zxterm-core)
 4. Generates fresh secrets (DB password, API keys, Fernet vault key)
 5. Builds and starts all Docker containers
@@ -55,14 +55,14 @@ cd zxterm-deploy
 | Flag | Description | Default |
 |------|-------------|---------|
 | `--key` | **Required.** Deployment license key | — |
-| `--key-server` | Key validation server URL | `https://keys.netentive.io` |
+| `--key-server` | Key validation server URL | `https://keys.zxterm.io` |
 | `--install-dir` | Directory to clone repos into | `~/netentive` |
 
 ### Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `KEY_SERVER_URL` | Key validation server URL | `https://keys.netentive.io` |
+| `KEY_SERVER_URL` | Key validation server URL | `https://keys.zxterm.io` |
 | `COLIMA_CPU` | Colima VM CPU cores | `4` |
 | `COLIMA_MEMORY` | Colima VM RAM (GB) | `6` |
 | `COLIMA_DISK` | Colima VM disk (GB) | `50` |

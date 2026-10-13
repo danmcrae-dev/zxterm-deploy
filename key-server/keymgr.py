@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Netentive Key Manager CLI.
+Zxterm Key Manager CLI.
 
-Manage deployment license keys for the Netentive platform.
+Manage deployment license keys for the Zxterm platform.
 
 Commands:
     init     — create database tables
@@ -285,7 +285,7 @@ def cmd_delete(args: argparse.Namespace) -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="keymgr",
-        description="Netentive deployment key manager.",
+        description="Zxterm deployment key manager.",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
