@@ -5,7 +5,7 @@ One-command deployment for the Netentive network assessment platform.
 ## Quick Start
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-zxterm.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
 ```
 
 You need a deployment key. Contact support@netentive.io to purchase one.
@@ -39,7 +39,7 @@ The script auto-installs:
 ### Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-zxterm.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
 ```
 
 Or clone and run locally:
@@ -47,7 +47,7 @@ Or clone and run locally:
 ```bash
 git clone https://github.com/danmcrae-dev/zxterm-deploy.git
 cd zxterm-deploy
-./deploy-netentive.sh --key NET-XXXX-XXXX-XXXX
+./deploy-zxterm.sh --key NET-XXXX-XXXX-XXXX
 ```
 
 ### Options

@@ -10,7 +10,7 @@
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-zxterm.sh | bash
 ```
 
 On Linux, the script detects that Docker is already installed and skips the Homebrew/Colima steps. It uses the original Docker Compose files directly with `network_mode: host` (native Linux supports this).
@@ -25,10 +25,10 @@ git clone git@github.com:danmcrae-dev/zxterm-deploy.git
 cd zxterm-deploy
 
 # Run with default settings
-./deploy-netentive.sh /opt/netentive
+./deploy-zxterm.sh /opt/netentive
 
 # Or specify a custom install directory
-./deploy-netentive.sh /home/deploy/netentive
+./deploy-zxterm.sh /home/deploy/netentive
 ```
 
 ## Network Configuration

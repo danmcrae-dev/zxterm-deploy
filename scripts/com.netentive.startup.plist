@@ -8,13 +8,13 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>__HOME__/netentive/netentive-start.sh</string>
+    <string>__HOME__/netentive/zxterm-start.sh</string>
   </array>
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>
-  <string>/tmp/netentive-startup.log</string>
+  <string>/tmp/zxterm-startup.log</string>
   <key>StandardErrorPath</key>
-  <string>/tmp/netentive-startup.log</string>
+  <string>/tmp/zxterm-startup.log</string>
 </dict>
 </plist>

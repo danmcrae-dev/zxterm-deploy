@@ -7,7 +7,7 @@ All notable changes to the Netentive deployment tooling are documented here.
 ## [0.1.0] - 2026-06-22
 
 ### Added
-- One-command deploy script (`deploy-netentive.sh`) for macOS and Linux
+- One-command deploy script (`deploy-zxterm.sh`) for macOS and Linux
 - Colima-based Docker deployment for macOS (no Docker Desktop required)
 - Host networking support via Colima `--network-address`
 - Automatic secret generation (DB password, MCP API key, Fernet vault key)

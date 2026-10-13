@@ -1,5 +1,5 @@
-# Creates a Windows scheduled task that runs netentive-start.sh in WSL on login
-$action = New-ScheduledTaskAction -Execute "wsl" -Argument "-e bash $env:USERPROFILE\netentive\netentive-start.sh"
+# Creates a Windows scheduled task that runs zxterm-start.sh in WSL on login
+$action = New-ScheduledTaskAction -Execute "wsl" -Argument "-e bash $env:USERPROFILE\netentive\zxterm-start.sh"
 $trigger = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 Register-ScheduledTask -TaskName "NetentiveAutoStart" -Action $action -Trigger $trigger -Settings $settings -Force

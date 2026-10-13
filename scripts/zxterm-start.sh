@@ -1,7 +1,7 @@
 #!/bin/bash
 # Netentive auto-start script — called by launchd/systemd/Task Scheduler on login
 # Starts the Docker runtime (platform-specific) + all containers
-LOG=/tmp/netentive-startup.log
+LOG=/tmp/zxterm-startup.log
 NETENTIVE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "[$(date)] Netentive startup beginning..." >> "$LOG"

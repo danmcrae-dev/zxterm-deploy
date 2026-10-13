@@ -5,7 +5,7 @@ Requires=docker.service
 
 [Service]
 Type=oneshot
-ExecStart=__HOME__/netentive/netentive-start.sh
+ExecStart=__HOME__/netentive/zxterm-start.sh
 RemainAfterExit=yes
 
 [Install]

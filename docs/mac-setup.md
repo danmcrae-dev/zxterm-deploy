@@ -10,7 +10,7 @@
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-zxterm.sh | bash
 ```
 
 The script installs everything:
@@ -51,13 +51,13 @@ Adjust the VM allocation before running the script:
 
 ```bash
 # Mac with 16GB RAM — recommended
-COLIMA_CPU=4 COLIMA_MEMORY=6 COLIMA_DISK=50 ./deploy-netentive.sh
+COLIMA_CPU=4 COLIMA_MEMORY=6 COLIMA_DISK=50 ./deploy-zxterm.sh
 
 # Mac with 32GB RAM — for large deployments
-COLIMA_CPU=8 COLIMA_MEMORY=12 COLIMA_DISK=100 ./deploy-netentive.sh
+COLIMA_CPU=8 COLIMA_MEMORY=12 COLIMA_DISK=100 ./deploy-zxterm.sh
 
 # Mac with 8GB RAM — minimum viable
-COLIMA_CPU=2 COLIMA_MEMORY=4 COLIMA_DISK=30 ./deploy-netentive.sh
+COLIMA_CPU=2 COLIMA_MEMORY=4 COLIMA_DISK=30 ./deploy-zxterm.sh
 ```
 
 ## Common Issues
