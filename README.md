@@ -1,11 +1,11 @@
-# netentive-deploy
+# zxterm-deploy
 
 One-command deployment for the Netentive network assessment platform.
 
 ## Quick Start
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/netentive-deploy/main/deploy-netentive.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
 ```
 
 You need a deployment key. Contact support@netentive.io to purchase one.
@@ -27,7 +27,7 @@ The script auto-installs:
 
 1. Installs prerequisites (Homebrew, Colima, Docker, Git)
 2. Validates your deployment key against the Netentive key server
-3. Clones the three private repos (netentive-saas, netentive-mcp, netentive-core)
+3. Clones the three private repos (zxterm, zxterm-mcp, zxterm-core)
 4. Generates fresh secrets (DB password, API keys, Fernet vault key)
 5. Builds and starts all Docker containers
 6. Runs database migrations
@@ -39,14 +39,14 @@ The script auto-installs:
 ### Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/netentive-deploy/main/deploy-netentive.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash -s -- --key NET-XXXX-XXXX-XXXX
 ```
 
 Or clone and run locally:
 
 ```bash
-git clone https://github.com/danmcrae-dev/netentive-deploy.git
-cd netentive-deploy
+git clone https://github.com/danmcrae-dev/zxterm-deploy.git
+cd zxterm-deploy
 ./deploy-netentive.sh --key NET-XXXX-XXXX-XXXX
 ```
 
@@ -78,15 +78,15 @@ Management commands:
 docker ps
 
 # Stop all services
-cd ~/netentive/netentive-saas/deployment && docker compose down
-cd ~/netentive/netentive-mcp && docker compose down
+cd ~/netentive/zxterm/deployment && docker compose down
+cd ~/netentive/zxterm-mcp && docker compose down
 
 # Start all services
-cd ~/netentive/netentive-saas/deployment && docker compose up -d
-cd ~/netentive/netentive-mcp && docker compose up -d
+cd ~/netentive/zxterm/deployment && docker compose up -d
+cd ~/netentive/zxterm-mcp && docker compose up -d
 
 # Update to latest version
-cd ~/netentive/netentive-deploy && bash scripts/update.sh
+cd ~/netentive/zxterm-deploy && bash scripts/update.sh
 ```
 
 ## Key Server Setup (For Administrators)
@@ -97,7 +97,7 @@ If you're managing license keys for customers, see [`key-server/README.md`](key-
 
 ```bash
 # On the key server (maximus):
-cd ~/netentive-deploy/key-server
+cd ~/zxterm-deploy/key-server
 python3 keymgr.py create --email customer@company.com --expires 2026-12-31 --max-installs 3
 # Output: NET-A3F2-9B1C-4D8E
 ```

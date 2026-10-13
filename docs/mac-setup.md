@@ -10,7 +10,7 @@
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/netentive-deploy/main/deploy-netentive.sh | bash
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash
 ```
 
 The script installs everything:

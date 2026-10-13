@@ -10,7 +10,7 @@
 ## Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/netentive-deploy/main/deploy-netentive.sh | bash
+curl -fsSL https://raw.githubusercontent.com/danmcrae-dev/zxterm-deploy/main/deploy-netentive.sh | bash
 ```
 
 On Linux, the script detects that Docker is already installed and skips the Homebrew/Colima steps. It uses the original Docker Compose files directly with `network_mode: host` (native Linux supports this).
@@ -21,8 +21,8 @@ For a dedicated server deployment:
 
 ```bash
 # Clone the deploy repo
-git clone git@github.com:danmcrae-dev/netentive-deploy.git
-cd netentive-deploy
+git clone git@github.com:danmcrae-dev/zxterm-deploy.git
+cd zxterm-deploy
 
 # Run with default settings
 ./deploy-netentive.sh /opt/netentive
@@ -53,10 +53,10 @@ Requires=docker.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-WorkingDirectory=/opt/netentive/netentive-saas/deployment
+WorkingDirectory=/opt/netentive/zxterm/deployment
 ExecStart=/usr/bin/docker compose up -d
 ExecStop=/usr/bin/docker compose down
-ExecStopPost=/usr/bin/docker compose -f /opt/netentive/netentive-mcp/docker-compose.yml down
+ExecStopPost=/usr/bin/docker compose -f /opt/netentive/zxterm-mcp/docker-compose.yml down
 
 [Install]
 WantedBy=multi-user.target

@@ -6,18 +6,18 @@ Netentive is a network assessment platform consisting of three application repos
 and a deployment repo.
 
 ```
-netentive-deploy/          <-- this repo (deployment scripts + docs)
+zxterm-deploy/          <-- this repo (deployment scripts + docs)
     |
     |-- clones -->
     |
-    +-- netentive-saas/    SaaS: FastAPI + React + PostgreSQL + Redis + Celery
-    +-- netentive-mcp/     MCP: MCP server + agent + GUI (device management)
-    +-- netentive-core/    Core: shared Python library (analysis, compliance)
+    +-- zxterm/    SaaS: FastAPI + React + PostgreSQL + Redis + Celery
+    +-- zxterm-mcp/     MCP: MCP server + agent + GUI (device management)
+    +-- zxterm-core/    Core: shared Python library (analysis, compliance)
 ```
 
 ## Component Details
 
-### SaaS (netentive-saas)
+### SaaS (zxterm)
 
 The main web application. Provides:
 
@@ -42,7 +42,7 @@ The main web application. Provides:
 - `celery_worker` — async task execution
 - `celery_beat` — scheduled tasks
 
-### MCP (netentive-mcp)
+### MCP (zxterm-mcp)
 
 The Management Control Plane. Provides:
 
@@ -60,7 +60,7 @@ The Management Control Plane. Provides:
 - `agent` — asyncio agent loop (SSE + heartbeat)
 - `gui` — standalone React app on port 3000
 
-### Core (netentive-core)
+### Core (zxterm-core)
 
 Shared Python library. No server. Used by both SaaS and MCP via volume mount.
 

@@ -47,7 +47,7 @@ if ! docker info &>/dev/null; then
 fi
 
 # Start SaaS containers
-SAAS_DEPLOY="$NETENTIVE_DIR/netentive-saas/deployment"
+SAAS_DEPLOY="$NETENTIVE_DIR/zxterm/deployment"
 if [[ -f "$SAAS_DEPLOY/../.env" ]]; then
     echo "[$(date)] Starting SaaS containers..." >> "$LOG"
     cd "$SAAS_DEPLOY"
@@ -58,7 +58,7 @@ else
 fi
 
 # Start MCP containers
-MCP_DEPLOY="$NETENTIVE_DIR/netentive-mcp/deployment"
+MCP_DEPLOY="$NETENTIVE_DIR/zxterm-mcp/deployment"
 if [[ -f "$MCP_DEPLOY/../.env" ]]; then
     echo "[$(date)] Starting MCP containers..." >> "$LOG"
     cd "$MCP_DEPLOY"

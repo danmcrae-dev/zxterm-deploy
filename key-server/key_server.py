@@ -39,8 +39,9 @@ DEPLOY_SSH_KEY_BASE64 = os.environ.get("DEPLOY_SSH_KEY_BASE64", "")
 # Env vars: DEPLOY_KEY_SAAS_BASE64, DEPLOY_KEY_MCP_BASE64, DEPLOY_KEY_CORE_BASE64
 # Falls back to DEPLOY_SSH_KEY_BASE64 for backward compatibility (single-key mode).
 DEPLOY_KEYS: dict[str, str] = {}
-for _repo in ("netentive-saas", "netentive-mcp", "netentive-core"):
-    _env_var = f"DEPLOY_KEY_{_repo.split('-')[1].upper()}_BASE64"
+for _repo in ("zxterm", "zxterm-mcp", "zxterm-core"):
+    _suffix = _repo.split("-", 1)[1] if "-" in _repo else "saas"
+    _env_var = f"DEPLOY_KEY_{_suffix.upper()}_BASE64"
     _val = os.environ.get(_env_var, "")
     if _val:
         DEPLOY_KEYS[_repo] = _val
@@ -55,7 +56,7 @@ TRUSTED_PROXIES = set(
 # Key format: NET-XXXX-XXXX-XXXX (uppercase hex)
 KEY_PATTERN = re.compile(r"^NET-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}$")
 
-REPOS = ["netentive-saas", "netentive-mcp", "netentive-core"]
+REPOS = ["zxterm", "zxterm-mcp", "zxterm-core"]
 GITHUB_ORG = "danmcrae-dev"
 
 # ---------------------------------------------------------------------------
@@ -212,7 +213,7 @@ def _build_success_response(row: sqlite3.Row) -> dict:
     """Build the success response payload."""
     return {
         "valid": True,
-        "deploy_keys": DEPLOY_KEYS,  # {"netentive-saas": "base64key", "netentive-mcp": "base64key", ...}
+        "deploy_keys": DEPLOY_KEYS,  # {"zxterm": "base64key", "zxterm-mcp": "base64key", ...}
         "repos": REPOS,
         "github_org": GITHUB_ORG,
         "expires_at": row["expires_at"],

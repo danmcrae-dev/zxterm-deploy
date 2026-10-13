@@ -30,8 +30,8 @@ The SSH keypair is generated once during setup. The **public key** is added as a
 ### 1. Generate the SSH deploy keypair
 
 ```bash
-cd /home/damcrae/netentive/netentive-deploy/key-server
-ssh-keygen -t ed25519 -f deploy_key -N "" -C "netentive-deploy-key"
+cd /home/damcrae/netentive/zxterm-deploy/key-server
+ssh-keygen -t ed25519 -f deploy_key -N "" -C "zxterm-deploy-key"
 ```
 
 This creates:
@@ -42,9 +42,9 @@ This creates:
 
 Go to each repo's settings and add the public key as a **Deploy Key** (read-only):
 
-- https://github.com/danmcrae-dev/netentive-saas/settings/keys
-- https://github.com/danmcrae-dev/netentive-mcp/settings/keys
-- https://github.com/danmcrae-dev/netentive-core/settings/keys
+- https://github.com/danmcrae-dev/zxterm/settings/keys
+- https://github.com/danmcrae-dev/zxterm-mcp/settings/keys
+- https://github.com/danmcrae-dev/zxterm-core/settings/keys
 
 Paste the contents of `deploy_key.pub` into each. Allow write access is **not** needed.
 
@@ -146,7 +146,7 @@ Success response (200):
 {
     "valid": true,
     "deploy_key": "<base64 SSH private key>",
-    "repos": ["netentive-saas", "netentive-mcp", "netentive-core"],
+    "repos": ["zxterm", "zxterm-mcp", "zxterm-core"],
     "github_org": "danmcrae-dev",
     "expires_at": "2026-12-31T23:59:59Z",
     "install_count": 1,

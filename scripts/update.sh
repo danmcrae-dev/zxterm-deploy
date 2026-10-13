@@ -33,7 +33,7 @@ echo ""
 # ── Pull latest code ──────────────────────────────────────────────
 info "Pulling latest code for all repos..."
 
-for repo in netentive-saas netentive-mcp netentive-core; do
+for repo in zxterm zxterm-mcp zxterm-core; do
     if [ -d "$INSTALL_DIR/$repo" ]; then
         info "  $repo..."
         (cd "$INSTALL_DIR/$repo" && git pull --ff-only) || err "  $repo pull failed"
@@ -43,7 +43,7 @@ done
 
 # ── Rebuild SaaS ──────────────────────────────────────────────────
 info "Rebuilding SaaS containers..."
-cd "$INSTALL_DIR/netentive-saas/deployment"
+cd "$INSTALL_DIR/zxterm/deployment"
 docker compose up -d --build 2>&1 | tail -5
 ok "SaaS rebuilt"
 
@@ -54,7 +54,7 @@ ok "Migrations complete"
 
 # ── Rebuild MCP ───────────────────────────────────────────────────
 info "Rebuilding MCP containers..."
-cd "$INSTALL_DIR/netentive-mcp"
+cd "$INSTALL_DIR/zxterm-mcp"
 docker compose up -d --build 2>&1 | tail -5
 ok "MCP rebuilt"
 
